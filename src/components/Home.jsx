@@ -1,5 +1,7 @@
+import Counter from '@/components/Counter';
+
 function Home() {
-    return <h1>Welcome to Home Page</h1>;
+    return <Counter/>;
   }
   
   export default Home;
