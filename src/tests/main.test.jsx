@@ -15,6 +15,6 @@ describe("Main Entry Point", () => {
       </Provider>
     );
 
-    expect(screen.getByText('Vite + React')).toBeInTheDocument();
+    expect(screen.getByText('TV Series')).toBeInTheDocument();
   });
 });

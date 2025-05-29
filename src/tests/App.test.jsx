@@ -11,6 +11,14 @@ vi.mock("@/components/Home", () => ({
   default: () => <div>Mock Home</div>,
 }));
 
+vi.mock("@/views/ShowTvseries", () => ({
+  default: () => <div>Mock view</div>,
+}));
+
+vi.mock("@/views/ShowTvSeriesDetails", () => ({
+  default: () => <div>Mock Detail</div>,
+}));
+
 vi.mock("@/components/About", () => ({
   default: () => <div>Mock About</div>,
 }));
@@ -26,6 +34,6 @@ describe("App Component (Shallow Test)", () => {
       </Provider>
     );
 
-    expect(screen.getByText(/Mock Home/i)).toBeInTheDocument();
+    expect(screen.getByText(/TV Series/i)).toBeInTheDocument();
   });
 });
