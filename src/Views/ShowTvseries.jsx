@@ -33,9 +33,9 @@ const ShowTvSeries= () => {
     return (
         <>
         <div className="m-1 p-1"><SearchComponent onSearch={handleSearch} onClear={getSeries}/></div>
-    <Container fluid className="mx-2">
-        <Row>{series.map((x,i)=>
-          <Col md={3} className="d-flex justify-content-center" key={i} ><ShowCard title={x.name||x.show.name} text={x?.rating?.average || x.show?.rating?.average} route={`/ShowTvSeriesDetails/${x.id}`} image={x?.image?.medium||x?.show?.image?.medium}/></Col>
+    <Container fluid className="p-3">
+         <Row className='justify-content-between'>{series.map((x,i)=>
+          <Col md={3} className="d-flex p-2 m-0 justify-content-center" key={i} ><ShowCard title={x.name||x.show.name} text={x?.rating?.average || x.show?.rating?.average} route={`/ShowTvSeriesDetails/${x.id}`} image={x?.image?.medium||x?.show?.image?.medium}/></Col>
        ) }</Row>
        </Container></>);
   }

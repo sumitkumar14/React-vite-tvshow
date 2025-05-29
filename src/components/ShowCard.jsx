@@ -9,7 +9,7 @@ function CardComponent({ title, text, image , route }) {
       };
     
   return (
-    <Card className="m-1" style={{ width: "16rem"}}>
+    <Card className="m-0 p-0" style={{ width: "16rem"}}>
       {image && <Card.Img variant="top" src={image} />}
       <Card.Body>
         <Card.Title>{title}</Card.Title>

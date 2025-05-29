@@ -26,7 +26,7 @@ function ShowTvSeriesDetails() {
   
     return (
         <>
-    <Container fluid className="m-4">
+    <Container fluid className="p-4">
         <Row>
           <Col md={3} className="d-flex"><ShowCard title={series.name} text={series.rating?.average}  image={series?.image?.medium}/></Col>
           <Col>
