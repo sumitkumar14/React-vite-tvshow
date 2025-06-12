@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 const counterSlice = createSlice({
     name: "counter",
-    initialState: { value: 0, showDialog: false },
+    initialState: { value: 0, showDialog: false, auth: false},
     reducers: {
       increment: (state) => {
         state.value += 1;
@@ -14,10 +14,13 @@ const counterSlice = createSlice({
       },
       closeDialog :(state)=>{
         state.showDialog=false;
-      }
+      },
+      authenticate : (state, action) =>{
+        state.auth=action.payload;
+      },
     },
   });
   
-  export const { increment, decrement, openDialog, closeDialog  } = counterSlice.actions;
+  export const { increment, decrement, openDialog, closeDialog, authenticate  } = counterSlice.actions;
   export default counterSlice.reducer;
   

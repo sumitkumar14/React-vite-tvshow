@@ -2,7 +2,7 @@ import { Card, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 
-function CardComponent({ title, text, image , route }) {
+function CardComponent({ title, text, image , isView=true, route }) {
     const navigate = useNavigate();
     const handleNavigation = () => {
         navigate(route); // Navigate to the given route
@@ -14,7 +14,7 @@ function CardComponent({ title, text, image , route }) {
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>Rating-{text}</Card.Text>
-        <Button variant="primary" onClick={handleNavigation}>Learn More</Button>
+        {isView && <Button variant="primary" onClick={handleNavigation}>Learn More</Button>}
       </Card.Body>
     </Card>
   );

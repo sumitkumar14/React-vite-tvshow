@@ -2,7 +2,6 @@
   "name": "my-vite-project",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "test": "vitest",
@@ -13,9 +12,15 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
+    "@tanstack/react-table": "^8.21.3",
     "axios": "^1.9.0",
+    "body-parser": "^2.2.0",
     "bootstrap": "^5.3.6",
+    "cors": "^2.8.5",
     "dompurify": "^3.2.6",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
     "my-vite-project": "file:",
     "react": "^19.1.0",
     "react-bootstrap": "^2.10.10",

@@ -7,7 +7,6 @@ function SearchComponent({ onSearch, onClear }) {
   const [query, setQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
 
-  // Debounce logic: Update debouncedQuery after 500ms
   useEffect(() => {
     const handler = setTimeout(() => {
       setDebouncedQuery(query);
@@ -18,10 +17,8 @@ function SearchComponent({ onSearch, onClear }) {
     };
   }, [query]);
 
-  // Trigger search only when debouncedQuery updates
-    // Ensure API call happens immediately when input becomes empty also do not get called
     useEffect(() => {
-        if (debouncedQuery ) {
+        if (debouncedQuery && debouncedQuery.length>=3 ) {
           onSearch(debouncedQuery);
         }
       }, [debouncedQuery, onSearch]);
@@ -49,7 +46,7 @@ function SearchComponent({ onSearch, onClear }) {
                 onSearch(""); // Ensures API resets search results
               }
       
-        } // Marks that the user has interacted
+        } 
 }
         />
         {query && (

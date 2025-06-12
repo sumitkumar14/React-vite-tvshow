@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Define the base API URL
-const API_BASE_URL = "https://api.tvmaze.com";
+const API_BASE_URL = `${import.meta.env.VITE_API_URL}`;
 
 //header
 const headers = { "Content-Type": "application/json" };
@@ -13,7 +13,7 @@ export const getSeriesList = async () => {
     return response.data;
   } catch (error) {
     console.error("Error fetching posts:", error);
-    throw error; // Rethrow for handling in components
+    throw error; 
   }
 };
 
@@ -23,7 +23,7 @@ export const searchSeriesList = async (val) => {
       return response.data;
     } catch (error) {
       console.error("Error fetching searched posts:", error);
-      throw error; // Rethrow for handling in components
+      throw error; 
     }
   };
 
@@ -33,7 +33,7 @@ export const searchSeriesList = async (val) => {
       return response.data;
     } catch (error) {
       console.error("Error fetching posts:", error);
-      throw error; // Rethrow for handling in components
+      throw error; 
     }
   };
 
@@ -43,7 +43,7 @@ export const searchSeriesList = async (val) => {
       return response.data;
     } catch (error) {
       console.error("Error fetching posts:", error);
-      throw error; // Rethrow for handling in components
+      throw error; 
     }
   };
 
@@ -53,6 +53,6 @@ export const searchSeriesList = async (val) => {
       return response.data;
     } catch (error) {
       console.error("Error fetching posts:", error);
-      throw error; // Rethrow for handling in components
+      throw error; 
     }
   };
